@@ -10,12 +10,14 @@
             text-align: center;
         }
         .calculator{
-            margin-top: 10%;
+            margin-top: 1%;
         }
         #output{
             height: 70px;  
-            width: 360px;  
+            width: 348px;  
             margin-bottom: 1%;
+            font-size: 40px;
+            text-align: right;
         }
         #b0{    
             width: 177px;   /* id 숫자, 연산자로 시작하니까 안됨 */
@@ -30,41 +32,42 @@
     </style>
 </head>
 <body>
+    <input readonly id="operator" style="border: none; margin-top: 120px; font-size: 30px;">
     <div class="calculator">
-        <input type="text" id="output" disabled>
+        <input type="number" id="output" readonly>
 
         <div class="row">
-            <button data-type="AC" id="AC"> AC </button>
-            <button data-type="positiveNegative" id="positiveNegative"> +/- </button>
-            <button data-type="percentage" id="percentage"> % </button>
-            <button data-type="operator" id="divide"> ÷ </button>
+            <button id="AC">AC</button>
+            <button id="positiveNegative">+/-</button>
+            <button id="percentage">%</button>
+            <button id="divide">÷</button>
         </div>
         <bar>
         <div class="row">
-            <button id="b7"> 7 </button>
-            <button id="b8"> 8 </button>
-            <button id="b9"> 9 </button>
-            <button data-type="operator" id="multiply"> x </button>
+            <button id="b7">7</button>
+            <button id="b8">8</button>
+            <button id="b9">9</button>
+            <button id="multiply">×</button>
         </div>    
         <bar>
         <div class="row">
-            <button id="b4"> 4 </button>
-            <button id="b5"> 5 </button>
-            <button id="b6"> 6 </button>
-            <button data-type="operator" id="minus"> - </button>
+            <button id="b4">4</button>
+            <button id="b5">5</button>
+            <button id="b6">6</button>
+            <button id="minus">-</button>
         </div>  
         <bar>
         <div class="row">
-            <button id="b1"> 1 </button>
-            <button id="b2"> 2 </button>
-            <button id="b3"> 3 </button>
-            <button data-type="operator" id="b+"> + </button>
+            <button id="b1">1</button>
+            <button id="b2">2</button>
+            <button id="b3">3</button>
+            <button id="plus">+</button>
         </div>      
         <bar>
         <div class="row">
-            <button id="b0"> 0 </button>
-            <button id="dot"> . </button>
-            <button data-type="result" id="result"> = </button>
+            <button id="b0">0</button>
+            <button id="dot">.</button>
+            <button id="calculate">=</button>
         </div>  
     </div>
     <script src="./script.js"></script>     
