@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        .calculator{
+            margin-top: 10%;
+        }
+
+        #display{
+            height: 70px;  
+            width: 348px;  
+            margin-bottom: 1%;
+            font-size: 40px;
+            text-align: right;
+        }
+        #b0{    
+            width: 173px;   /* id 숫자, 연산자로 시작하니까 안됨 */
+        }
+        button{
+            width : 80px;
+            height: 80px;
+            margin: 5px 3px 5px 3px;
+            font-size: 40px;
+        }   
+    </style>
+</head>
+<body>
+    
+    <div class="calculator">
+      <!--      <div class="show">
+       <input type="number" id="output" readonly>
+        </div>--> 
+        <div class="show">
+            <input type="text" id="display" readonly>
+        </div>
+
+        <div class="row">
+            <button onclick="reset()" id="AC">AC</button>
+            <button onclick="pmmp()" id="positiveNegative">+/-</button>
+            <button onclick="add('%')" id="percentage">%</button>
+            <button onclick="add('/')" id="divide">÷</button>
+        </div>
+        <bar>
+        <div class="row">
+            <button onclick="add(7)">7</button>
+            <button onclick="add(8)">8</button>
+            <button onclick="add(9)">9</button>
+            <button onclick="add('*')" id="multiply">×</button>
+        </div>    
+        <bar>
+        <div class="row">
+            <button onclick="add(4)">4</button>
+            <button onclick="add(5)">5</button>
+            <button onclick="add(6)">6</button>
+            <button onclick="add('-')">-</button>
+        </div>  
+        <bar>
+        <div class="row">
+            <button onclick="add(1)">1</button>
+            <button onclick="add(2)">2</button>
+            <button onclick="add(3)">3</button>
+            <button onclick="add('+')" id="plus">+</button>
+        </div>      
+        <bar>
+        <div class="row">
+            <button onclick="add(0)" id="b0">0</button>
+            <button onclick="add('.')">.</button>
+            <button onclick="calculate()" id="calculate">=</button>
+        </div>  
+    </div>
+    <script>
+        function add(char) {
+            const display = document.getElementById('display');
+            display.value = display.value + char;
+        }
+
+        function calculate() {
+        //    const output = document.getElementById('output');
+            const display = document.getElementById('display');
+        //    const result = eval(output.value);
+            const result = eval(display.value);
+            display.value = result;
+        //   output.value = result;
+        }
+
+        function reset() {
+            document.getElementById('display').value = "";
+        }
+        
+        // nan이나 infinity 뜰때 버튼 새로 누를 시 자동 초기화
+    </script>     
+</body>
+</html>
