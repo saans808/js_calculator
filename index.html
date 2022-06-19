@@ -14,13 +14,13 @@
         }
         #output{
             height: 70px;  
-            width: 348px;  
+            width: 345px;  
             margin-bottom: 1%;
             font-size: 40px;
             text-align: right;
         }
         #b0{    
-            width: 177px;   /* id 숫자, 연산자로 시작하니까 안됨 */
+            width: 170px;   /* id 숫자, 연산자로 시작하니까 안됨 */
         }
         button{
             width : 80px;
@@ -32,9 +32,9 @@
     </style>
 </head>
 <body>
-    <input readonly id="operator" style="border: none; margin-top: 120px; font-size: 30px;">
+    <input id="operator" style="border: none; margin-top: 120px; font-size: 30px;" readonly>
     <div class="calculator">
-        <input type="number" id="output" readonly>
+        <input type="text" id="output" readonly>
 
         <div class="row">
             <button id="AC">AC</button>
@@ -70,6 +70,6 @@
             <button id="calculate">=</button>
         </div>  
     </div>
-    <script src="./script.js"></script>     
+    <script src="./3 계산기.js"></script>     
 </body>
 </html>
